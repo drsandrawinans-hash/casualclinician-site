@@ -364,6 +364,13 @@ h2.section-title {
   color: var(--cream);
   font-size: 0.85rem;
   opacity: 0.9;
+   text-decoration: none;
+   cursor: pointer;
+   transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.badge:hover, .badge:focus-visible {
+   opacity: 1;
+   transform: translateY(-2px);
 }
 .badge .badge-icon {
   width: 46px;
