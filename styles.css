@@ -82,20 +82,11 @@ a { color: inherit; }
 }
 
 .brand-mark {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1.5px dotted var(--sage);
-  flex-shrink: 0;
-  position: relative;
-}
-.brand-mark::before {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border-radius: 50%;
-  background: var(--sage);
-  opacity: 0.85;
+       width: 32px;
+       height: 32px;
+       flex-shrink: 0;
+       object-fit: contain;
+       display: block;
 }
 
 nav.primary-nav {
