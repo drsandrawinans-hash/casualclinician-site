@@ -234,7 +234,16 @@ section { padding: 76px 0; }
   text-align: center;
   box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
-.note-card .cup { font-size: 1.8rem; margin-bottom: 10px; }
+.note-card .cup-icon { margin: 0 auto 10px; width: 40px; height: 36px; color: var(--sage-deep); }
+  .note-card .cup-icon .steam { transform-origin: center bottom; opacity: 0; animation: steamRise 2.4s ease-in-out infinite; }
+  .note-card .cup-icon .steam-1 { animation-delay: 0s; }
+  .note-card .cup-icon .steam-2 { animation-delay: 0.4s; }
+  .note-card .cup-icon .steam-3 { animation-delay: 0.8s; }
+  @keyframes steamRise {
+         0% { transform: translateY(2px); opacity: 0; }
+         35% { opacity: 0.8; }
+         100% { transform: translateY(-8px); opacity: 0; }
+  }
 .note-card h3 {
   font-family: var(--font-display);
   font-size: 1.2rem;
