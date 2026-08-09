@@ -38,20 +38,45 @@
     <div class="contact-card">
       <h3>Send a message</h3>
             <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                      <input type="hidden" name="access_key" value="461fbe09-7070-420b-a13c-12d7006ff797">
-                      <input type="hidden" name="subject" value="New message from Casual Clinician website">
-        <div class="form-field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="Name" required>
-        </div>
-        <div class="form-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="Email" required>
-        </div>
-        <div class="form-field">
-          <label for="message">Message</label>
-          <textarea id="message" name="Message" required></textarea>
-        </div>
+          <input type="hidden" name="access_key" value="461fbe09-7070-420b-a13c-12d7006ff797">
+          <input type="hidden" name="subject" value="New message from Casual Clinician website">
+          <p class="form-intro">Thank you for reaching out. Please use this form for general inquiries only. For your privacy, kindly refrain from sharing sensitive clinical information here.</p>
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="Full Name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="Email Address" required>
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone Number">
+          </div>
+          <div class="form-field">
+            <label for="reason">What brings you to therapy?</label>
+            <select id="reason" name="What brings you to therapy" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="Life Transitions">Life Transitions</option>
+              <option value="Anxiety/Stress">Anxiety/Stress</option>
+              <option value="Perfectionism">Perfectionism</option>
+              <option value="Neurodivergent Care">Neurodivergent Care</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="insurance">Which insurance plan are you hoping to use?</label>
+            <select id="insurance" name="Insurance Plan" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="Aetna">Aetna</option>
+              <option value="United Healthcare">United Healthcare</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Is there anything brief you'd like me to know or questions you might have?</label>
+            <textarea id="message" name="Message"></textarea>
+          </div>
+          <p class="form-outro">I look forward to connecting with you.</p>
         <button type="submit" class="btn" style="border:none; cursor:pointer;">Send message</button>
               <p id="form-status" class="form-status" aria-live="polite"></p>
       </form>
