@@ -510,3 +510,8 @@ h2.section-title {
   .badges { gap: 24px; }
   .note-card { max-width: 100%; }
 }
+
+
+.form-status { margin-top: 12px; font-size: 0.95rem; min-height: 1.2em; }
+.form-status-success { color: var(--sage-deep); }
+.form-status-error { color: var(--terracotta-deep); }
