@@ -37,7 +37,9 @@
 
     <div class="contact-card">
       <h3>Send a message</h3>
-      <form action="mailto:DrSandraWinans@casualclinician.com" method="post" enctype="text/plain">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                      <input type="hidden" name="access_key" value="461fbe09-7070-420b-a13c-12d7006ff797">
+                      <input type="hidden" name="subject" value="New message from Casual Clinician website">
         <div class="form-field">
           <label for="name">Name</label>
           <input type="text" id="name" name="Name" required>
@@ -51,6 +53,7 @@
           <textarea id="message" name="Message" required></textarea>
         </div>
         <button type="submit" class="btn" style="border:none; cursor:pointer;">Send message</button>
+              <p id="form-status" class="form-status" aria-live="polite"></p>
       </form>
     </div>
 
