@@ -455,6 +455,32 @@ h2.section-title {
   outline-offset: 1px;
 }
 .form-field textarea { min-height: 130px; resize: vertical; }
+.form-field select {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  color: var(--ink);
+}
+.form-field select:focus {
+  outline: 2px solid var(--sage);
+  outline-offset: 1px;
+}
+.form-intro {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+.form-outro {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
 
 .crisis-box {
   border-left: 3px solid var(--terracotta);
