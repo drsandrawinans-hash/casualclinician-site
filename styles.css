@@ -104,8 +104,8 @@ nav.primary-nav a {
   padding: 10px 16px;
   border-radius: 999px;
   opacity: 0.88;
-  transition: opacity 0.15s ease, background 0.15s ease;
-  white-space: nowrap;
+  transition: opacity 0.3s ease, background 0.3s ease;
+    white-space: nowrap;
 }
 
 nav.primary-nav a:hover { opacity: 1; background: rgba(244,240,230,0.08); }
@@ -170,6 +170,14 @@ nav.primary-nav a.is-active {
   font-size: 1.08rem;
   color: rgba(244,240,230,0.92);
 }
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero h1 { animation: heroFadeUp 0.9s ease both; }
+.hero .eyebrow-rule { animation: heroFadeUp 0.9s ease both 0.15s; }
+.hero .tagline { animation: heroFadeUp 0.9s ease both 0.3s; }
+.hero .lede { animation: heroFadeUp 0.9s ease both 0.45s; }
 
 /* ---------- Sections ---------- */
 
@@ -319,7 +327,7 @@ h2.section-title {
   border-radius: 10px;
   font-family: var(--font-body);
   font-size: 1rem;
-  transition: background 0.15s ease, transform 0.15s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 .btn:hover { background: var(--terracotta-deep); transform: translateY(-1px); }
 
@@ -348,6 +356,42 @@ h2.section-title {
   font-size: 1.1rem;
   margin-top: 26px;
 }
+
+/* FAQ accordion */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
+.faq-item {
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 4px 24px;
+  border: 1px solid var(--line);
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  color: var(--sage-deep);
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 18px 28px 18px 0;
+  position: relative;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 16px;
+  font-size: 1.4rem;
+  color: var(--sage-deep);
+}
+.faq-item[open] summary::after { content: "−"; }
+.faq-item p { margin: 0 0 20px; color: var(--ink-soft); }
 
 /* Badges */
 
